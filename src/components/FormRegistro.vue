@@ -31,8 +31,7 @@ usuario.value = {
   password: formulario.value.password,
   conocimientos: formulario.value.conocimientos.slice(),
   admin: formulario.value.admin,
-  observaciones: formulario.value.observaciones,
-  grupo: formulario.value.grupo
+ 
 };
 }
 

@@ -12,6 +12,32 @@
   </form>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    login() {
+      const getData = async() => {
+  try {
+    const res = await fetch('https://raw.githubusercontent.com/vaniamga/api-usuarios/main/usuarios/usuarios.json')
+    posts.value = await res.json()
+  } catch (error) {
+    console.log(error)
+    } finally{
+      setTimeout (() => {
+        loading.value = false
+      }, 1000)
+    }
+  }
+getData()
 
-
+      console.log('Login con email:', this.email, 'y password:', this.password);
+    },
+  },
+};
+</script>

@@ -10,8 +10,8 @@ const router = createRouter({
       component: RegistroView
     },
     {
-      path: '/loging',
-      name: 'loging',
+      path: '/login',
+      name: 'login',
       
       component: () => import('../views/LoginView.vue')
     },
